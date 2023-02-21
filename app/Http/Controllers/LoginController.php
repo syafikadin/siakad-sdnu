@@ -13,4 +13,30 @@ class LoginController extends Controller
             'title' => 'Login',
         ]);
     }
+
+    public function authenticate(Request $request)
+    {
+        $credentials = $request->validate([
+            'nis' => 'required',
+            'password' => 'required'
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->intended('/dashboard');
+        }
+
+        return back()->with('loginError', 'Login Failed!');
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+
+        request()->session()->invalidate();
+
+        request()->session()->regenerate();
+
+        return redirect("/");
+    }
 }
