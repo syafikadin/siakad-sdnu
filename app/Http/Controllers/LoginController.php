@@ -21,12 +21,14 @@ class LoginController extends Controller
             'password' => 'required'
         ]);
 
-        if (Auth::attempt($credentials)) {
+        if (Auth::guard('siswa')->attempt($credentials)) {
             $request->session()->regenerate();
-            if (auth()->user()->is_admin == 1) {
-                return redirect()->intended('/admin');
-            }
             return redirect()->intended('/dashboard');
+        }
+
+        if (Auth::guard('web')->attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->intended('/admin');
         }
 
         return back()->with('loginError', 'Login Failed!');

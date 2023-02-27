@@ -27,8 +27,8 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/dashboard', function () {
     return view('dashboard.index');
-});
+})->middleware('user');
 
 Route::get('/admin', function () {
     return view('admin.index');
-});
+})->middleware('admin');
