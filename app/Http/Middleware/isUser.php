@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class isUser
 {
@@ -16,7 +17,7 @@ class isUser
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!auth()->check() || auth()->user()->level !== '1' || auth()->user()->level !== '2') {
+        if (!Auth::guard('siswa')->check() || Auth::guard('siswa')->user()->level != 1) {
             abort(403);
         }
         return $next($request);
