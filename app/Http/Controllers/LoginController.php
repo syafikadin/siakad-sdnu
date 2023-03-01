@@ -21,7 +21,7 @@ class LoginController extends Controller
             'password' => 'required'
         ]);
 
-        if (Auth::guard('siswa')->attempt($credentials)) {
+        if (Auth::guard('student')->attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->intended('/dashboard');
         }

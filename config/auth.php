@@ -41,9 +41,9 @@ return [
             'provider' => 'users',
         ],
 
-        'siswa' => [
+        'student' => [
             'driver' => 'session',
-            'provider' => 'siswas',
+            'provider' => 'students',
         ],
     ],
 
@@ -70,9 +70,9 @@ return [
             'model' => App\Models\User::class,
         ],
 
-        'siswas' => [
+        'students' => [
             'driver' => 'eloquent',
-            'model' => App\Models\Siswa::class
+            'model' => App\Models\Student::class
         ]
 
         // 'users' => [

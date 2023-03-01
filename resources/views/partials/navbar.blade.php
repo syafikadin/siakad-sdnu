@@ -27,9 +27,9 @@
         </ul>
         <ul class="navbar-nav ms-auto">
           <li class="nav-item dropdown">
-          @if (Auth::guard('siswa')->user())
+          @if (Auth::guard('student')->user())
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Helo {{ Auth::guard('siswa')->user()->nama }}
+              Helo {{ Auth::guard('student')->user()->nama }}
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-window-reverse"></i> My Dashboard</a></li>
@@ -43,7 +43,7 @@
             </ul>
           @elseif(Auth::guard('web')->user())
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Helo {{ Auth::guard('siswa')->user()->nama }}
+              Helo {{ Auth::guard('web')->user()->nama }}
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-window-reverse"></i> My Dashboard</a></li>

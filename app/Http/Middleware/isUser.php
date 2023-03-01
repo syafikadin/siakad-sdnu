@@ -17,7 +17,7 @@ class isUser
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!Auth::guard('siswa')->check() || Auth::guard('siswa')->user()->level != 1) {
+        if (!Auth::guard('student')->check() || Auth::guard('student')->user()->level != 1) {
             abort(403);
         }
         return $next($request);

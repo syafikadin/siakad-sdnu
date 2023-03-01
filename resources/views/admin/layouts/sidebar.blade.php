@@ -11,13 +11,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('admin') ? 'active' : '' }}" aria-current="page" href="/admin">
+                <a class="nav-link {{ Request::is('admin/students*') ? 'active' : '' }}" aria-current="page" href="/admin/students">
                 <span data-feather="home" class="align-text-bottom"></span>
                 Data Siswa
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('admin') ? 'active' : '' }}" aria-current="page" href="/admin">
+                <a class="nav-link {{ Request::is('admin/teachers*') ? 'active' : '' }}" aria-current="page" href="/admin/teachers">
                 <span data-feather="home" class="align-text-bottom"></span>
                 Data Guru
                 </a>
