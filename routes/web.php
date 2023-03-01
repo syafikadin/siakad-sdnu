@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,4 +34,4 @@ Route::get('/admin', function () {
     return view('admin.index');
 })->middleware('admin');
 
-Route::resource('/admin/students', UserController::class);
+Route::resource('/admin/students', StudentController::class);

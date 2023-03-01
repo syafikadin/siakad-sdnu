@@ -15,7 +15,9 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.students.index', [
+            'students' => Student::all()
+        ]);
     }
 
     /**
