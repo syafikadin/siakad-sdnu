@@ -25,11 +25,13 @@ class DatabaseSeeder extends Seeder
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
         ]);
 
-        Student::create([
-            'nama' => 'Adin',
-            'nis' => '2',
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-        ]);
+        // Student::create([
+        //     'nis' => '2',
+        //     'nama' => 'Adin',
+        //     'kelas' => '6A',
+        //     'jenis_kelamin' => 'laki-laki',
+        //     'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        // ]);
 
         User::factory(5)->create();
         Student::factory(5)->create();

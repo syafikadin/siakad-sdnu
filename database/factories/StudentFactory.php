@@ -19,6 +19,11 @@ class StudentFactory extends Factory
         return [
             'nis' => $this->faker->unique()->nik(),
             'nama' => $this->faker->name(),
+            'kelas' => $this->faker->randomElement(['1A', '1B', '2A', '2B', '3A', '3B', '4A', '4B', '5A', '5B', '6A', '6B']),
+            'jenis_kelamin' => $this->faker->randomElement(['Laki-laki', 'Perempuan']),
+            'tanggal_lahir' => $this->faker->date(),
+            'alamat' => $this->faker->address(),
+            'username' => $this->faker->userName(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         ];
     }
