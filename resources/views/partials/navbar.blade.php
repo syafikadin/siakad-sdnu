@@ -46,7 +46,7 @@
               Helo {{ Auth::guard('web')->user()->nama }}
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-window-reverse"></i> My Dashboard</a></li>
+              <li><a class="dropdown-item" href="/admin"><i class="bi bi-layout-text-window-reverse"></i> My Dashboard</a></li>
               <li><hr class="dropdown-divider"></li>
               <form action="/logout" method="post">
                 @csrf
