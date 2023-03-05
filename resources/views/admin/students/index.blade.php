@@ -7,7 +7,7 @@
 
     <div class="table-responsive col-lg-8">
         <a href="/admin/students/create" class="btn btn-primary">Create new student</a>
-          <table class="table table-striped table-sm">
+          <table class="table table-striped table-sm mt-3">
             <thead>
               <tr class="text-center">
                 <th scope="col">No</th>
