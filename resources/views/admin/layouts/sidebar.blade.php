@@ -22,6 +22,12 @@
                 Data Guru
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('admin/teachers*') ? 'active' : '' }}" aria-current="page" href="/admin/teachers">
+                <span data-feather="user" class="align-text-bottom"></span>
+                Pelajaran
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
