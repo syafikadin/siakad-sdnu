@@ -9,14 +9,14 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ Request::is('dashboard/posts*') ? 'active' : '' }}" href="/dashboard/posts">
-                <span data-feather="user" class="align-text-bottom"></span>
-                My Profile
+                <span data-feather="book-open" class="align-text-bottom"></span>
+                Jadwal Pelajaran
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ Request::is('dashboard/posts*') ? 'active' : '' }}" href="/dashboard/posts">
                 <span data-feather="book-open" class="align-text-bottom"></span>
-                Course
+                Raport
                 </a>
             </li>
         </ul>
