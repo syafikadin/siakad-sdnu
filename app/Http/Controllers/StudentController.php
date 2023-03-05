@@ -27,7 +27,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.students.create');
     }
 
     /**
@@ -38,7 +38,7 @@ class StudentController extends Controller
      */
     public function store(StoreStudentRequest $request)
     {
-        //
+        $validateData = $request->validate();
     }
 
     /**
@@ -62,7 +62,9 @@ class StudentController extends Controller
      */
     public function edit(Student $student)
     {
-        //
+        return view('admin.students.edit', [
+            'student' => $student
+        ]);
     }
 
     /**
