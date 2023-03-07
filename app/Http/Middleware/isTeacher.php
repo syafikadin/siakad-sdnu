@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class isUser
+class isTeacher
 {
     /**
      * Handle an incoming request.
@@ -17,7 +17,7 @@ class isUser
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!Auth::guard('student')->check() || Auth::guard('student')->user()->level != 1) {
+        if (!Auth::guard('teacher')->check() || Auth::guard('teacher')->user()->level != 1) {
             abort(403);
         }
         return $next($request);
