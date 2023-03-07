@@ -17,11 +17,11 @@ class LoginController extends Controller
     public function authenticate(Request $request)
     {
         $credentials = $request->validate([
-            'nis' => 'required',
+            'username' => 'required',
             'password' => 'required'
         ]);
 
-        if (Auth::guard('student')->attempt($credentials)) {
+        if (Auth::guard('student')->attempt($credentials) || Auth::guard('teacher')->attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->intended('/dashboard');
         }
