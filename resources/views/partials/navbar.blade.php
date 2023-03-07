@@ -27,7 +27,21 @@
         </ul>
         <ul class="navbar-nav ms-auto">
           <li class="nav-item dropdown">
-          @if (Auth::guard('student')->user())
+          @if (Auth::guard('teacher')->user())
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Helo {{ Auth::guard('teacher')->user()->nama }}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-window-reverse"></i> My Dashboard</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <form action="/logout" method="post">
+                @csrf
+                <button type="submit" class="dropdown-item">
+                  <i class="bi bi-box-arrow-right"></i> Logout
+                </button>
+              </form>
+            </ul>
+          @elseif(Auth::guard('student')->user())
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Helo {{ Auth::guard('student')->user()->nama }}
             </a>
