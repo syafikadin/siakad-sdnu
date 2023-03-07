@@ -17,9 +17,9 @@ class isTeacher
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!Auth::guard('teacher')->check() || Auth::guard('teacher')->user()->level != 1) {
-            abort(403);
+        if (Auth::guard('teacher')->check() || Auth::guard('teacher')->user()->level == '1') {
+            return $next($request);
         }
-        return $next($request);
+        abort(403);
     }
 }
