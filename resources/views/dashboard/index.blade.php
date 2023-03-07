@@ -2,6 +2,10 @@
 
 @section('container')
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Welcome back, {{ Auth::guard('student')->user()->nama }}</h1>
+        @if (Auth::guard('teacher')->user())
+            <h1 class="h2">Welcome back guru, {{ Auth::guard('teacher')->user()->nama }}</h1>
+        @else
+            <h1 class="h2">Welcome back murid, {{ Auth::guard('student')->user()->nama }}</h1>
+        @endif
     </div>
 @endsection
