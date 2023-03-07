@@ -24,12 +24,12 @@
                       <h1 class="h3 mb-3 fw-normal text-center">Please Login</h1>
 
                       <div class="form-floating">
-                        <input type="text" name="nis" id="nis" placeholder="nis" autofocus required value="{{ old('nis') }}" class="form-control
-                        @error('nis')
+                        <input type="text" name="username" id="username" placeholder="username" autofocus required value="{{ old('username') }}" class="form-control
+                        @error('username')
                             is-invalid
                         @enderror">
-                        <label for="nis">NIS</label>
-                        @error('nis')
+                        <label for="username">Username</label>
+                        @error('username')
                           <div class="invalid-feedback">
                             {{ $message }}
                           </div>
