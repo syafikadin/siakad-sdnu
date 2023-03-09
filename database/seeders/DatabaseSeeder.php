@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\MataPelajaran;
 use App\Models\User;
 use App\Models\Siswa;
 use App\Models\Student;
@@ -46,6 +47,18 @@ class DatabaseSeeder extends Seeder
             'alamat' => 'Kepanjen',
             'username' => 'adin',
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        ]);
+
+        MataPelajaran::create([
+            'mata_pelajaran' => 'Bahasa Indonesia'
+        ]);
+
+        MataPelajaran::create([
+            'mata_pelajaran' => 'Matematika'
+        ]);
+
+        MataPelajaran::create([
+            'mata_pelajaran' => 'Bahasa Inggris'
         ]);
 
         User::factory(5)->create();
