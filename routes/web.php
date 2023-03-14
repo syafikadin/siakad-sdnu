@@ -45,3 +45,5 @@ Route::resource('/admin/students', StudentController::class);
 Route::resource('/admin/teachers', TeacherController::class);
 
 Route::resource('/admin/mapel', MataPelajaranController::class);
+
+Route::resource('/dashboard/raports', RaportController::class);
