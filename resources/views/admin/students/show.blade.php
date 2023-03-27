@@ -25,7 +25,7 @@
             <div class="col-lg-8 ms-4">
                 <h2 class="mb-4">{{ $student->nama }}</h2>
                 <p>NIS : {{ $student->nis }}</p>
-                <p>Kelas : {{ $student->kelas }}</p>
+                <p>Kelas : {{ $student->kelas->nama_kelas }}</p>
                 <p>Jenis Kelamin : {{ $student->jenis_kelamin }}</p>
                 <p>Tanggal Lahir : {{ $student->tanggal_lahir }}</p>
                 <p>Alamat : {{ $student->alamat }}</p>

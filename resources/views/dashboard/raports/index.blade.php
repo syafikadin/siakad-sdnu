@@ -45,45 +45,12 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="text-center">
-                <td>1</td>
-                <td>Al Qur'an Hadis</td>
-                <td>80</td>
-                <td>82</td>
-                <td>B</td>
-                <td>82</td>
-                <td>B</td>
-                <td>82</td>
-                <td>B</td>
-                <td>82</td>
-                <td>B</td>
-              </tr>
-              <tr class="text-center">
-                <td>2</td>
-                <td>Bahasa Indonesia</td>
-                <td>80</td>
-                <td>82</td>
-                <td>B</td>
-                <td>82</td>
-                <td>B</td>
-                <td>82</td>
-                <td>B</td>
-                <td>82</td>
-                <td>B</td>
-              </tr>
-              <tr class="text-center">
-                <td>3</td>
-                <td>Matematika</td>
-                <td>80</td>
-                <td>82</td>
-                <td>B</td>
-                <td>82</td>
-                <td>B</td>
-                <td>82</td>
-                <td>B</td>
-                <td>82</td>
-                <td>B</td>
-              </tr>
+              @foreach ($raports as $raport)
+                  <tr>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $raport }}</td>
+                  </tr>
+              @endforeach
               {{-- @foreach ($students as $student)    
               <tr>
                 <td class="text-center">{{ $loop->iteration }}</td>

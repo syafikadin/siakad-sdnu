@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Kelas;
 use App\Models\MataPelajaran;
 use App\Models\User;
 use App\Models\Siswa;
@@ -41,7 +42,8 @@ class DatabaseSeeder extends Seeder
         Student::create([
             'nis' => '3',
             'nama' => 'Adin',
-            'kelas' => '6A',
+            'nama_kelas' => '6A',
+            'kelas_id' => '1',
             'jenis_kelamin' => 'laki-laki',
             'tanggal_lahir' => '2000-06-16',
             'alamat' => 'Kepanjen',
@@ -50,16 +52,104 @@ class DatabaseSeeder extends Seeder
         ]);
 
         MataPelajaran::create([
-            'mata_pelajaran' => 'Bahasa Indonesia'
+            'kode_mata_pelajaran' => 'BI1',
+            'mata_pelajaran' => 'Bahasa Indonesia',
+            'kelas_id' => '1'
         ]);
 
         MataPelajaran::create([
-            'mata_pelajaran' => 'Matematika'
+            'kode_mata_pelajaran' => 'BI2',
+            'mata_pelajaran' => 'Bahasa Indonesia',
+            'kelas_id' => '2'
         ]);
 
         MataPelajaran::create([
-            'mata_pelajaran' => 'Bahasa Inggris'
+            'kode_mata_pelajaran' => 'BI3',
+            'mata_pelajaran' => 'Bahasa Indonesia',
+            'kelas_id' => '3'
         ]);
+
+        MataPelajaran::create([
+            'kode_mata_pelajaran' => 'BI4',
+            'mata_pelajaran' => 'Bahasa Indonesia',
+            'kelas_id' => '4'
+        ]);
+
+        MataPelajaran::create([
+            'kode_mata_pelajaran' => 'BI5',
+            'mata_pelajaran' => 'Bahasa Indonesia',
+            'kelas_id' => '5'
+        ]);
+
+        MataPelajaran::create([
+            'kode_mata_pelajaran' => 'BI6',
+            'mata_pelajaran' => 'Bahasa Indonesia',
+            'kelas_id' => '6'
+        ]);
+
+        Kelas::create([
+            'nama_kelas' => '1',
+        ]);
+
+        Kelas::create([
+            'nama_kelas' => '2',
+        ]);
+
+        Kelas::create([
+            'nama_kelas' => '3',
+        ]);
+
+        Kelas::create([
+            'nama_kelas' => '4',
+        ]);
+
+        Kelas::create([
+            'nama_kelas' => '5',
+        ]);
+
+        Kelas::create([
+            'nama_kelas' => '6',
+        ]);
+
+        // Kelas::create([
+        //     'kelas' => '2A',
+        // ]);
+
+        // Kelas::create([
+        //     'kelas' => '2B',
+        // ]);
+
+        // Kelas::create([
+        //     'kelas' => '3A',
+        // ]);
+
+        // Kelas::create([
+        //     'kelas' => '3B',
+        // ]);
+
+        // Kelas::create([
+        //     'kelas' => '4A',
+        // ]);
+
+        // Kelas::create([
+        //     'kelas' => '4B',
+        // ]);
+
+        // Kelas::create([
+        //     'kelas' => '5A',
+        // ]);
+
+        // Kelas::create([
+        //     'kelas' => '5B',
+        // ]);
+
+        // Kelas::create([
+        //     'kelas' => '6A',
+        // ]);
+
+        // Kelas::create([
+        //     'kelas' => '6B',
+        // ]);
 
         User::factory(5)->create();
         Teacher::factory(5)->create();

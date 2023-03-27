@@ -12,4 +12,9 @@ class MataPelajaran extends Model
     protected $guarded = [
         'id',
     ];
+
+    public function kelas()
+    {
+        return $this->belongsTo(Kelas::class);
+    }
 }
