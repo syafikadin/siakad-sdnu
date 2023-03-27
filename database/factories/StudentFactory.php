@@ -19,7 +19,8 @@ class StudentFactory extends Factory
         return [
             'nis' => $this->faker->unique()->nik(),
             'nama' => $this->faker->name(),
-            'kelas' => $this->faker->randomElement(['1A', '1B', '2A', '2B', '3A', '3B', '4A', '4B', '5A', '5B', '6A', '6B']),
+            'nama_kelas' => $this->faker->randomElement(['1A', '1B', '2A', '2B', '3A', '3B', '4A', '4B', '5A', '5B', '6A', '6B']),
+            'kelas_id' => $this->faker->numberBetween(1, 6),
             'jenis_kelamin' => $this->faker->randomElement(['Laki-laki', 'Perempuan']),
             'tanggal_lahir' => $this->faker->date(),
             'alamat' => $this->faker->address(),
