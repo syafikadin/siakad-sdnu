@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\JadwalPelajaranController;
+use App\Http\Controllers\KelasController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MataPelajaranController;
 use App\Http\Controllers\RaportController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
+use App\Models\JadwalPelajaran;
 use App\Models\MataPelajaran;
 use Illuminate\Support\Facades\Route;
 
@@ -34,8 +37,6 @@ Route::get('/dashboard', function () {
     return view('dashboard.index');
 })->middleware('user');
 
-// Route::resource('/dashboard/jadwal');
-
 Route::get('/admin', function () {
     return view('admin.index');
 })->middleware('admin');
@@ -46,4 +47,8 @@ Route::resource('/admin/teachers', TeacherController::class);
 
 Route::resource('/admin/mapel', MataPelajaranController::class);
 
+Route::resource('/admin/kelas', KelasController::class);
+
 Route::resource('/dashboard/raports', RaportController::class);
+
+Route::resource('/dashboard/jadwal', JadwalPelajaranController::class);

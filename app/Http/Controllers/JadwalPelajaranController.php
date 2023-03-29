@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Kelas;
-use App\Http\Requests\StoreKelasRequest;
-use App\Http\Requests\UpdateKelasRequest;
+use App\Models\JadwalPelajaran;
+use App\Http\Requests\StoreJadwalPelajaranRequest;
+use App\Http\Requests\UpdateJadwalPelajaranRequest;
 
-class KelasController extends Controller
+class JadwalPelajaranController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class KelasController extends Controller
      */
     public function index()
     {
-        return view('admin.kelas.index', [
-            'kelas' => Kelas::all()
+        return view('dashboard.jadwal.index', [
+            'jadwals' => JadwalPelajaran::all()
         ]);
     }
 
@@ -33,10 +33,10 @@ class KelasController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreKelasRequest  $request
+     * @param  \App\Http\Requests\StoreJadwalPelajaranRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreKelasRequest $request)
+    public function store(StoreJadwalPelajaranRequest $request)
     {
         //
     }
@@ -44,10 +44,10 @@ class KelasController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Kelas  $kelas
+     * @param  \App\Models\JadwalPelajaran  $jadwalPelajaran
      * @return \Illuminate\Http\Response
      */
-    public function show(Kelas $kelas)
+    public function show(JadwalPelajaran $jadwalPelajaran)
     {
         //
     }
@@ -55,10 +55,10 @@ class KelasController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Kelas  $kelas
+     * @param  \App\Models\JadwalPelajaran  $jadwalPelajaran
      * @return \Illuminate\Http\Response
      */
-    public function edit(Kelas $kelas)
+    public function edit(JadwalPelajaran $jadwalPelajaran)
     {
         //
     }
@@ -66,11 +66,11 @@ class KelasController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateKelasRequest  $request
-     * @param  \App\Models\Kelas  $kelas
+     * @param  \App\Http\Requests\UpdateJadwalPelajaranRequest  $request
+     * @param  \App\Models\JadwalPelajaran  $jadwalPelajaran
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateKelasRequest $request, Kelas $kelas)
+    public function update(UpdateJadwalPelajaranRequest $request, JadwalPelajaran $jadwalPelajaran)
     {
         //
     }
@@ -78,10 +78,10 @@ class KelasController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Kelas  $kelas
+     * @param  \App\Models\JadwalPelajaran  $jadwalPelajaran
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Kelas $kelas)
+    public function destroy(JadwalPelajaran $jadwalPelajaran)
     {
         //
     }

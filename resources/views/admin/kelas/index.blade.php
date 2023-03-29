@@ -11,17 +11,14 @@
           <thead>
             <tr class="text-center">
               <th class="text-center" scope="col">No</th>
-              <th scope="col">Kode Kelas</th>
-              <th scope="col">Mata Pelajaran</th>
               <th scope="col">Nama Kelas</th>
             </tr>
           </thead>
           <tbody>
-            @foreach ($mapels as $mapel)    
+            @foreach ($kelas as $kls)    
             <tr class="text-center">
               <td>{{ $loop->iteration }}</td>
-              <td>{{ $mapel->kode_mata_pelajaran }}</td>
-              <td>{{ $mapel->nama_mata_pelajaran }}</td>
+              <td>{{ $kls->jadwal_pelajaran->mata_pelajaran }}</td>
             </tr>
             @endforeach
           </tbody>

@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('mata_pelajarans', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('jadwal_pelajaran_id')->nullable();
             $table->string('kode_mata_pelajaran');
-            $table->string('mata_pelajaran');
-            $table->string('kelas_id');
+            $table->string('nama_mata_pelajaran');
             $table->timestamps();
         });
     }

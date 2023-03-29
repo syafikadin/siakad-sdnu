@@ -45,13 +45,13 @@ class Kelas extends Authenticatable
         return 'username';
     }
 
-    public function mata_pelajarans()
-    {
-        return $this->hasMany(MataPelajaran::class);
-    }
-
     public function students()
     {
         return $this->hasMany(Student::class);
+    }
+
+    public function jadwal_pelajaran()
+    {
+        return $this->hasOne(JadwalPelajaran::class);
     }
 }

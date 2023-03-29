@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class MataPelajaran extends Model
+class JadwalPelajaran extends Model
 {
     use HasFactory;
 
@@ -18,8 +18,8 @@ class MataPelajaran extends Model
         return $this->belongsTo(Kelas::class);
     }
 
-    public function jadwal_pelajaran()
+    public function mata_pelajaran()
     {
-        return $this->belongsTo(JadwalPelajaran::class);
+        return $this->hasMany(MataPelajaran::class);
     }
 }

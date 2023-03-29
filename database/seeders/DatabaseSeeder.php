@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\JadwalPelajaran;
 use App\Models\Kelas;
 use App\Models\MataPelajaran;
 use App\Models\User;
@@ -53,62 +54,94 @@ class DatabaseSeeder extends Seeder
 
         MataPelajaran::create([
             'kode_mata_pelajaran' => 'BI1',
-            'mata_pelajaran' => 'Bahasa Indonesia',
-            'kelas_id' => '1'
+            'nama_mata_pelajaran' => 'Bahasa Indonesia 1',
+            'jadwal_pelajaran_id' => '1'
         ]);
 
         MataPelajaran::create([
             'kode_mata_pelajaran' => 'BI2',
-            'mata_pelajaran' => 'Bahasa Indonesia',
-            'kelas_id' => '2'
+            'nama_mata_pelajaran' => 'Bahasa Indonesia 2',
         ]);
 
         MataPelajaran::create([
             'kode_mata_pelajaran' => 'BI3',
-            'mata_pelajaran' => 'Bahasa Indonesia',
-            'kelas_id' => '3'
+            'nama_mata_pelajaran' => 'Bahasa Indonesia 3',
         ]);
 
         MataPelajaran::create([
             'kode_mata_pelajaran' => 'BI4',
-            'mata_pelajaran' => 'Bahasa Indonesia',
-            'kelas_id' => '4'
+            'nama_mata_pelajaran' => 'Bahasa Indonesia 4',
         ]);
 
         MataPelajaran::create([
             'kode_mata_pelajaran' => 'BI5',
-            'mata_pelajaran' => 'Bahasa Indonesia',
-            'kelas_id' => '5'
+            'nama_mata_pelajaran' => 'Bahasa Indonesia 5',
         ]);
 
         MataPelajaran::create([
             'kode_mata_pelajaran' => 'BI6',
-            'mata_pelajaran' => 'Bahasa Indonesia',
-            'kelas_id' => '6'
+            'nama_mata_pelajaran' => 'Bahasa Indonesia 6',
+        ]);
+
+        MataPelajaran::create([
+            'kode_mata_pelajaran' => 'MTK1',
+            'nama_mata_pelajaran' => 'Matematika 1',
+        ]);
+
+        MataPelajaran::create([
+            'kode_mata_pelajaran' => 'MTK2',
+            'nama_mata_pelajaran' => 'Matematika 2',
+        ]);
+
+        MataPelajaran::create([
+            'kode_mata_pelajaran' => 'MTK3',
+            'nama_mata_pelajaran' => 'Matematika 3',
+        ]);
+
+        MataPelajaran::create([
+            'kode_mata_pelajaran' => 'MTK4',
+            'nama_mata_pelajaran' => 'Matematika 4',
+        ]);
+
+        MataPelajaran::create([
+            'kode_mata_pelajaran' => 'MTK5',
+            'nama_mata_pelajaran' => 'Matematika 5',
+        ]);
+
+        MataPelajaran::create([
+            'kode_mata_pelajaran' => 'MTK6',
+            'nama_mata_pelajaran' => 'Matematika 6',
+        ]);
+
+        JadwalPelajaran::create([
+            'kelas_id' => '1',
+            'mata_pelajaran_id' => '1',
         ]);
 
         Kelas::create([
-            'nama_kelas' => '1',
+            'nama_kelas' => '1A',
+            'jadwal_pelajaran_id' => '1',
         ]);
 
         Kelas::create([
-            'nama_kelas' => '2',
+            'nama_kelas' => '2A',
+            'jadwal_pelajaran_id' => '1',
         ]);
 
         Kelas::create([
-            'nama_kelas' => '3',
+            'nama_kelas' => '3A',
         ]);
 
         Kelas::create([
-            'nama_kelas' => '4',
+            'nama_kelas' => '4A',
         ]);
 
         Kelas::create([
-            'nama_kelas' => '5',
+            'nama_kelas' => '5A',
         ]);
 
         Kelas::create([
-            'nama_kelas' => '6',
+            'nama_kelas' => '6A',
         ]);
 
         // Kelas::create([

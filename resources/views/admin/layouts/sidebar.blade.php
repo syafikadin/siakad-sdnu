@@ -23,6 +23,12 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link {{ Request::is('admin/kelas*') ? 'active' : '' }}" aria-current="page" href="/admin/kelas">
+                <span data-feather="server" class="align-text-bottom"></span>
+                Data Kelas
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link {{ Request::is('admin/mapel*') ? 'active' : '' }}" aria-current="page" href="/admin/mapel">
                 <span data-feather="book-open" class="align-text-bottom"></span>
                 Mata Pelajaran
