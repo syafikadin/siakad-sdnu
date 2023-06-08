@@ -27,7 +27,7 @@
         </ul>
         <ul class="navbar-nav ms-auto">
           <li class="nav-item dropdown">
-          @if (Auth::guard('teacher')->user())
+          {{-- @if (Auth::guard('teacher')->user())
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Helo {{ Auth::guard('teacher')->user()->nama }}
             </a>
@@ -54,8 +54,8 @@
                   <i class="bi bi-box-arrow-right"></i> Logout
                 </button>
               </form>
-            </ul>
-          @elseif(Auth::guard('web')->user())
+            </ul> --}}
+          @if(Auth::guard('web')->user())
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Helo {{ Auth::guard('web')->user()->nama }}
             </a>

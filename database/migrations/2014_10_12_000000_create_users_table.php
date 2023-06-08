@@ -15,15 +15,23 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('nis')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('username')->unique();
             $table->string('password');
-            $table->string('level')->default(0);
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('role');
+            $table->boolean('status');
             $table->rememberToken();
             $table->timestamps();
         });
+
+        // Role
+        // 1 : Admin
+        // 2 : Guru
+        // 3 : Siswa
+
+        // Status
+        // 1 : Aktif
+        // 2 : Tidak Aktif
     }
 
     /**

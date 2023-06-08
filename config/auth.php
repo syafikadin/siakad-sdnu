@@ -41,15 +41,15 @@ return [
             'provider' => 'users',
         ],
 
-        'student' => [
-            'driver' => 'session',
-            'provider' => 'students',
-        ],
+        // 'student' => [
+        //     'driver' => 'session',
+        //     'provider' => 'students',
+        // ],
 
-        'teacher' => [
-            'driver' => 'session',
-            'provider' => 'teachers',
-        ]
+        // 'teacher' => [
+        //     'driver' => 'session',
+        //     'provider' => 'teachers',
+        // ]
     ],
 
     /*
@@ -75,15 +75,15 @@ return [
             'model' => App\Models\User::class,
         ],
 
-        'students' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Student::class
-        ],
+        // 'students' => [
+        //     'driver' => 'eloquent',
+        //     'model' => App\Models\Student::class
+        // ],
 
-        'teachers' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Teacher::class
-        ],
+        // 'teachers' => [
+        //     'driver' => 'eloquent',
+        //     'model' => App\Models\Teacher::class
+        // ],
 
         // 'users' => [
         //     'driver' => 'database',
