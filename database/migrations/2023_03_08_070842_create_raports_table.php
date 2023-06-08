@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('raports', function (Blueprint $table) {
             $table->id();
             $table->foreignId('student_id');
+            $table->foreignId('mata_pelajaran_id');
+
             $table->timestamps();
         });
     }

@@ -23,15 +23,27 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('admin/kelas*') ? 'active' : '' }}" aria-current="page" href="/admin/kelas">
-                <span data-feather="server" class="align-text-bottom"></span>
-                Data Kelas
+                <a class="nav-link {{ Request::is('admin/jadwals*') ? 'active' : '' }}" aria-current="page" href="/admin/teachers">
+                <span data-feather="user" class="align-text-bottom"></span>
+                Jadwal Pelajaran
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('admin/mapel*') ? 'active' : '' }}" aria-current="page" href="/admin/mapel">
-                <span data-feather="book-open" class="align-text-bottom"></span>
-                Mata Pelajaran
+                <a class="nav-link {{ Request::is('admin/rapors*') ? 'active' : '' }}" aria-current="page" href="/admin/teachers">
+                <span data-feather="user" class="align-text-bottom"></span>
+                Rapor
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('admin/penilaians*') ? 'active' : '' }}" aria-current="page" href="/admin/teachers">
+                <span data-feather="user" class="align-text-bottom"></span>
+                Penilaian
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('admin/beritas*') ? 'active' : '' }}" aria-current="page" href="/admin/teachers">
+                <span data-feather="user" class="align-text-bottom"></span>
+                Berita Sekolah
                 </a>
             </li>
         </ul>
